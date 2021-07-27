@@ -13,4 +13,15 @@ public class Grades {
         this.size++;
 
     }
+    public int lastCharacter(){
+        return this.grades[--this.size];
+    }
+    public int averageCharacter(){
+        int result = 0;
+        for (int i = 0; i < this.size; i++){
+            int number = this.grades[i];
+            result = result + number;
+        }
+            return result / this.size;
+    }
 }

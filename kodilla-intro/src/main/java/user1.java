@@ -21,14 +21,10 @@ public class user1 {
         }
         result = result / users.length;
         System.out.println(result);
-        for (int i=0; i<users.length; i++) {
-            if(users[i].age < result)
-            {
+        for (int i = 0; i < users.length; i++) {
+            if (users[i].age < result) {
                 System.out.println(users[i].name);
             }
-                else {
-            System.out.println();}
         }
-    }
 
-}
+    }}

@@ -44,5 +44,8 @@ public class User {
         if (usersAge[2] < srednia) {
             System.out.println(usersAge[2] + " " + "Klaudiusz is younger than average age");
         }
-    }
+        if (usersAge[3] < srednia) {
+            System.out.println(usersAge[3] + " " + "Marcin is younger than average age");
         }
+    }
+}
