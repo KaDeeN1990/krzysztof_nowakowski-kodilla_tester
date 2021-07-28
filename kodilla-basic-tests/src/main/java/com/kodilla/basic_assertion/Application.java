@@ -14,7 +14,7 @@ public class Application {
         }
 
         int rozResult = calculator.roznica(a, b);
-        boolean correct1 = ResultChecker.assertEquals1(-3, rozResult);
+        boolean correct1 = ResultChecker.assertEquals(-3, rozResult);
         if (correct1) {
             System.out.println("Roznica dziala poprawnie dla liczb " + a + " i " + b);
         } else {
