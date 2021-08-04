@@ -3,9 +3,9 @@ package com.kodilla.abstracts.homework;
 public class Person {
     public String firstname;
     public int age;
-    public String job;
+    public Job job;
 
-    public Person(String firstname, int age, String job) {
+    public Person(String firstname, int age, Job job) {
         this.firstname = firstname;
         this.age = age;
         this.job = job;
