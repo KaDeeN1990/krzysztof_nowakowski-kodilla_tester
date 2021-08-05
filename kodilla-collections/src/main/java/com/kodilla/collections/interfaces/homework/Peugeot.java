@@ -8,16 +8,16 @@ public class Peugeot implements Car {
         this.speed = speed;
     }
     public int getSpeed() {
-        return increaseSpeed() + decreaseSpeed();
+        return speed + increaseSpeed()*3 - decreaseSpeed()*2;
     }
 
     public int increaseSpeed() {
-        return speed + 15;
+        return 15;
 
     }
 
     public int decreaseSpeed() {
-        return speed - 10;
+        return 10;
 
     }
 }

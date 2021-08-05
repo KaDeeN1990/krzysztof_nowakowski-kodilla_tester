@@ -10,16 +10,16 @@ public class Seat implements Car {
 
 
     public int getSpeed() {
-        return speed;
+        return speed + increaseSpeed()*3 - decreaseSpeed()*2;
     }
 
     public int increaseSpeed() {
-        return speed + 10;
+        return 10;
 
     }
 
     public int decreaseSpeed() {
-        return speed - 20;
+        return 20;
 
     }
 }

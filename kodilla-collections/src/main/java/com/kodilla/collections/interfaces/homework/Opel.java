@@ -9,16 +9,16 @@ public class Opel implements Car {
         }
 
     public int getSpeed() {
-        return speed;
+        return speed + increaseSpeed()*3 - decreaseSpeed()*2;
     }
 
     public int increaseSpeed() {
-        return speed + 25;
+        return  25;
 
     }
 
     public int decreaseSpeed() {
-        return speed - 30;
+        return 30;
 
     }
 
