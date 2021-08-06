@@ -20,9 +20,9 @@ public class CarsApplication {
     public static Car drawCar(){
         Random random = new Random();
             int drawnCar = random.nextInt(3);
-            int a = random.nextInt(4);
-            int b = random.nextInt(5);
-            int c = random.nextInt(3);
+            int a = random.nextInt(400);
+            int b = random.nextInt(450);
+            int c = random.nextInt(370);
 
             if (drawnCar == 0)
                 return new Opel(a);

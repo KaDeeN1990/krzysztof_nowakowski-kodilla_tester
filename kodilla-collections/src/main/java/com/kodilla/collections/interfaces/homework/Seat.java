@@ -22,4 +22,11 @@ public class Seat implements Car {
         return 20;
 
     }
+
+    @Override
+    public String toString() {
+        return "Seat{" +
+                "speed=" + speed +
+                '}';
+    }
 }
