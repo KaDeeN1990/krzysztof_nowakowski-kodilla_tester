@@ -12,6 +12,7 @@ public class CarRace {
         doRace(opel);
     }
     public static void doRace(Car car){
-        System.out.println(car.getSpeed());
+        System.out.println("Prędkość samochodu zwiększyła się trzykrotnie o " + car.increaseSpeed() + ". Zmniejszyła się dwukrotnie o " +
+                car.decreaseSpeed() + ". Ostateczna prędkość samochodu to " + car.getSpeed());
     }
 }
