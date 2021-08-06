@@ -21,8 +21,7 @@ public class GeneralCarListApplication {
 
         System.out.println(cars.size());
         for (Car car : cars){
-            System.out.println(car + " increase speed " + car.increaseSpeed() + " decrease speed " + car.decreaseSpeed() + " get speed " +
-                    car.getSpeed());
+            System.out.println(car.getSpeed());
         }
     }
 }
