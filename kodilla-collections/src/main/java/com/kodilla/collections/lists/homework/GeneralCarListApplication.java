@@ -16,6 +16,9 @@ public class GeneralCarListApplication {
         cars.add(new Peugeot(60));
         cars.add(new Opel(100));
 
+        cars.remove(2);
+        cars.remove(seat);
+
         System.out.println(cars.size());
         for (Car car : cars){
             System.out.println(car + " increase speed " + car.increaseSpeed() + " decrease speed " + car.decreaseSpeed() + " get speed " +
