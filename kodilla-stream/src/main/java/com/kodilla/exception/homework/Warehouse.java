@@ -1,13 +1,19 @@
 package com.kodilla.exception.homework;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Warehouse {
+    List<Order> orders = new ArrayList<>();
 
-    public static Order addOrder(String number){
+    public void addOrder(String number){
         Order order = new Order(number);
-        return order;
+        orders.add(order);
     }
-    public void getOrder(String number){
-
+    public Order getOrder(String number) throws OrderDoesntExistException {
+        return orders.stream()
+                .filter(o->o.getNumber().equals(number))
+                .findAny().orElseThrow(() -> new OrderDoesntExistException());
     }
 }

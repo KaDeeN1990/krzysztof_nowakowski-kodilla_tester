@@ -6,12 +6,12 @@ public class Student {
     String name;
     Teacher teacher;
 
-    public Student(String name, String Teacher) {
+    public Student(String name, Teacher teacher) {
         this.name = name;
         this.teacher = teacher;
     }
 
-    public String getName2() {
+    public String getName() {
         return name;
     }
 

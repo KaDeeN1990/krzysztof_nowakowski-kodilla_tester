@@ -10,7 +10,7 @@ public class ForumStats {
                 .map(u -> u.getNumberOfPost())
                 .mapToInt(n -> n)
                 .average()
-                .getAsDouble();
+                .orElse(0);
         System.out.println(avg39);
 
         double avg40minus = UsersRepository.getUsersList()
@@ -19,7 +19,7 @@ public class ForumStats {
                 .map(u -> u.getNumberOfPost())
                 .mapToInt(n -> n)
                 .average()
-                .getAsDouble();
+                .orElse(0);
         System.out.println(avg40minus);
     }
 }

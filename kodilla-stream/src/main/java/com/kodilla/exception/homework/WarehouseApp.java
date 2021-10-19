@@ -5,10 +5,17 @@ import java.util.List;
 
 public class WarehouseApp {
     public static void main(String[] args) {
-        List<Order> orders = new ArrayList<>();
-        orders.add(Warehouse.addOrder("101"));
-        orders.add(Warehouse.addOrder("201"));
-        orders.add(Warehouse.addOrder("301"));
-        System.out.println(orders);
+        Warehouse warehouse = new Warehouse();
+        warehouse.addOrder("101");
+        warehouse.addOrder("201");
+        warehouse.addOrder("301");
+
+        try {
+            Order order = warehouse.getOrder("102");
+            System.out.println(order);
+        } catch (OrderDoesntExistException e) {
+            e.printStackTrace();
+        }
+
     }
 }
