@@ -5,8 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 
-public class AllegroTestingApp {
+import java.util.List;
+
+public class AllegroTestingApp2 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "c:\\Selenium-drivers\\Chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -15,16 +18,16 @@ public class AllegroTestingApp {
         WebElement accept = driver.findElement(By.xpath("/html/body/div[2]/div[7]/div/div/div/div/div[2]/div[2]/button[1]"));
         accept.click();
         Thread.sleep(1000);
-        WebElement changeCategory = driver.findElement(By.xpath("/html/body/div[2]/div[3]/header/div/div/div[1]/div/form/div[3]/div/select"));
+        WebElement changeCategory = driver.findElement(By.cssSelector(".mp7g_oh > select"));
         Select categorySelect = new Select(changeCategory);
-        categorySelect = new Select(changeCategory);
         categorySelect.selectByIndex(3);
         Thread.sleep(1000);
-        WebElement search = driver.findElement(By.xpath("/html/body/div[2]/div[3]/header/div/div/div[1]/div/form/input"));
+        WebElement search = driver.findElement(By.cssSelector(".mpof_ki > input"));
         search.sendKeys("Mavic mini");
         search.submit();
         Thread.sleep(1000);
-        WebElement dron = driver.findElement(By.tagName("opbox-listing"));
-        dron.submit();
+        List<WebElement> element = driver.findElements(By.cssSelector("section > article"));
+        element.get(0).getText();
+        element.get(1).getText();
     }
 }
