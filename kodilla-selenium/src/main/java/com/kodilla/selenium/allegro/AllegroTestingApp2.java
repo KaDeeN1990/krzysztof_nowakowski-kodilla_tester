@@ -29,5 +29,6 @@ public class AllegroTestingApp2 {
         List<WebElement> element = driver.findElements(By.cssSelector("section > article"));
         element.get(0).getText();
         element.get(1).getText();
+        System.out.println(element.get(0).getText());
     }
 }
